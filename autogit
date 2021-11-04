@@ -1,0 +1,57 @@
+#!/bin/bash
+
+while getopts ":a :b :d :m:h" opt; do
+  case $opt in
+    h)
+	echo "						Auto-git v1.0"
+	echo "		Tired of typing in the same three lines of code in oreder to make changes to your Github?"
+	echo "	Autogit is here to the rescue! Input a message with the (-m) flag or simple use one of the two auto"
+	echo "	comments. Still a lot of room for options to be updated. Stay tuned on my github: "
+	echo "	<https://github.com/Brian-S-Park/Ubuntu-Start-Message> Thanks for checking it out!"
+	echo ""
+	echo "						[Help menu]" 
+	echo "	-h	help"
+	echo "	-m	Input custom message to commit"
+	echo "	-a	Automatic message 'Minor Changes to Github' to commit"
+	echo "	-b	Automatic message 'Major Changes to Github' to commit"
+	echo "	-d	Automatic message 'Updated Version [current date]'"
+	echo ""
+      exit 1
+      ;;
+    m)
+	git add .
+        git commit -m "$OPTARG"
+        git push origin main
+	echo "Github was Updated!"
+      ;;
+    a)
+	git add .
+        git commit -m "Minor Changes to project"
+        git push origin main
+	echo "Minor change to Github"
+      ;;
+    b)
+	git add .
+        git commit -m "Major Changes to project"
+        git push origin main
+        echo "Major change to Github"
+      ;;
+    d)
+	git add .
+	DATE=$(date +%m/%d/%Y)
+        git commit -m "Updated Version - $DATE"
+	git push origin main
+        echo "Github Updated!"
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1
+      ;;
+  esac
+done
+
+
