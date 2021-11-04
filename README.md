@@ -7,7 +7,7 @@
 
 A simple bash script that automatically pushes your code to Github without typing out all the steps. It saves me
 a lot time and I hope it can help you too. Works on any machine capable of running bash shell. I plan on adding more
-features in the future so stay tuned! Thanks for checking itout!
+features in the future so stay tuned! Thanks for checking it out!
 
 	Instructions
 	1.Clone the repo to your local drive and change into that newly created directiory.
