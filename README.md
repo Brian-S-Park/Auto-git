@@ -5,7 +5,7 @@
 				\____|__  /____/ |__|  \____/          \___  /|__||__|
 				        \/                            /_____/
 
-A simple bash script that automatically pushes your code to Github without typing out all the steps. It savea me
+A simple bash script that automatically pushes your code to Github without typing out all the steps. It saves me
 a lot time and I hope it can help you too. Works on any machine capable of running bash shell. I plan on adding more
 features in the future so stay tuned! Thanks for checking itout!
 
