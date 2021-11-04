@@ -22,6 +22,6 @@ features in the future so stay tuned! Thanks for checking it out!
 	example: autogit -m "Thanks Autogit!"
 	*performs
 		- git add .
-		- git commit "Thanks Autogit!"
+		- git commit "Thanks Auto-git!"
 		- git push origin main
 
