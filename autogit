@@ -15,6 +15,7 @@ while getopts ":a :b :d :m:h" opt; do
 	echo "	-a	Automatic message 'Minor Changes to Github' to commit"
 	echo "	-b	Automatic message 'Major Changes to Github' to commit"
 	echo "	-d	Automatic message 'Updated Version [current date]'"
+	echo "	-s	Setup new repo (under construction)"
 	echo ""
       exit 1
       ;;
