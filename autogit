@@ -1,9 +1,9 @@
 #!/bin/bash
 
-while getopts ":a :b :d :m:h" opt; do
+while getopts ":1 :2 :d :m:h" opt; do
   case $opt in
     h)
-	echo "						Auto-git v1.0"
+	echo "						Auto-git v1.1"
 	echo "		Tired of typing in the same three lines of code in oreder to make changes to your Github?"
 	echo "	Autogit is here to the rescue! Input a message with the (-m) flag or simple use one of the two auto"
 	echo "	comments. Still a lot of room for options to be updated. Stay tuned on my github: "
@@ -12,10 +12,10 @@ while getopts ":a :b :d :m:h" opt; do
 	echo "						[Help menu]" 
 	echo "	-h	help"
 	echo "	-m	Input custom message to commit"
-	echo "	-a	Automatic message 'Minor Changes to Github' to commit"
-	echo "	-b	Automatic message 'Major Changes to Github' to commit"
+	echo "	-1	Automatic message 'Minor Changes to Github'"
+	echo "	-2	Automatic message 'Major Changes to Github'"
 	echo "	-d	Automatic message 'Updated Version [current date]'"
-	echo "	-s	Setup new repo (under construction)"
+	echo "	-r	Create new repository and initializes it"
 	echo ""
       exit 1
       ;;
@@ -25,13 +25,13 @@ while getopts ":a :b :d :m:h" opt; do
         git push origin main
 	echo "Github was Updated!"
       ;;
-    a)
+    1)
 	git add .
         git commit -m "Minor Changes to project"
         git push origin main
 	echo "Minor change to Github"
       ;;
-    b)
+    2)
 	git add .
         git commit -m "Major Changes to project"
         git push origin main
@@ -43,6 +43,17 @@ while getopts ":a :b :d :m:h" opt; do
         git commit -m "Updated Version - $DATE"
 	git push origin main
         echo "Github Updated!"
+      ;;
+     r)
+        gh repo create $OPTARG
+        cd $OPTARG
+        git init
+        touch README.md
+        git add README.md
+        git commit -m "first commit"
+        git branch -M main
+        git push -u origin main
+        echo "Repository was Created!"
       ;;
     \?)
       echo "Invalid option: -$OPTARG" >&2
