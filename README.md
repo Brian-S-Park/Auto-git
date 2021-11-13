@@ -42,7 +42,7 @@ features in the future so stay tuned! Thanks for checking it out!
 		- git push origin main
 
  
-UPDATE![11/4/21]: Just added the create a repository feature. It just calls the gh tool (Github CLI) to make a new 
+UPDATE [11/4/21]: Just added the create a repository feature. It just calls the gh tool (Github CLI) to make a new 
 repository and initializes it so that the repo is ready to use right away. It saves me a lot of time because now I 
 rarely have to leave my keyboard!! Refer to Github CLI documentation for instructions on how to download Github CLI
 on your system. I plan on adding more in the future so stay tuned!
