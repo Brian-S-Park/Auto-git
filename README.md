@@ -10,6 +10,7 @@ a lot time and I hope it can help you too. Works on any machine capable of runni
 features in the future so stay tuned! Thanks for checking it out!
 
 	Instructions (Linux)
+
 	1.Clone the repo to your local drive and change into that newly created directiory.
 	2.Use "chmod +x autogit " to make it executable.
 	3.Use "sudo nano ~/.bashrc" and scroll to the very bottom (or whatever text editor you like to use).
@@ -20,6 +21,7 @@ features in the future so stay tuned! Thanks for checking it out!
 	  to find out more about different flags. (A retart of terminal may be required)
 
 	Instructions (MacOS)
+
 	1.Clone the repo to your local drive and change into that newly created directiory.
 	2.Use "chmod +x autogit" to make it executable.
 	 *Note: On MacOS there will be no .bashrc file. When Mac terminal opens up, it reads these files in a
