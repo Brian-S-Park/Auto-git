@@ -14,7 +14,7 @@ while getopts ":1 :2 :d :m:h" opt; do
 	echo "	-m	Input custom message to commit"
 	echo "	-1	Automatic message 'Minor Changes to Github'"
 	echo "	-2	Automatic message 'Major Changes to Github'"
-	echo "	-d	Automatic message 'Updated Version [current date]'"
+	echo "	-d	Automatic message 'Update [current date]'"
 	echo "	-r	Create new repository and initializes it"
 	echo ""
       exit 1
@@ -22,25 +22,29 @@ while getopts ":1 :2 :d :m:h" opt; do
     m)
 	git add .
         git commit -m "$OPTARG"
-        git push origin main
+        git pull origin main
+	git push origin main
 	echo "Github was Updated!"
       ;;
     1)
 	git add .
         git commit -m "Minor Changes to project"
-        git push origin main
+        git pull origin main
+	git push origin main
 	echo "Minor change to Github"
       ;;
     2)
 	git add .
         git commit -m "Major Changes to project"
-        git push origin main
+        git pull origin main
+	git push origin main
         echo "Major change to Github"
       ;;
     d)
 	git add .
 	DATE=$(date +%m/%d/%Y)
-        git commit -m "Updated Version - $DATE"
+        git commit -m "Update - $DATE"
+	git pull origin main
 	git push origin main
         echo "Github Updated!"
       ;;
