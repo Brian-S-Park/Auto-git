@@ -5,9 +5,10 @@
 				\____|__  /____/ |__|  \____/          \___  /|__||__|
 				        \/                            /_____/
 
-A simple bash script that automatically pushes your code to Github without typing out all the steps. It saves me
-a lot time and I hope it can help you too. Works on any machine capable of running bash shell. I plan on adding more
-features in the future so stay tuned! Thanks for checking it out!
+A simple bash script that automatically pushes your code to Github without typing out all the steps. The idea of this project is
+to compile all the commands and tools that I use for Github into one convenient bash script to call. It saves me a lot time and
+I hope it can help you too. Works on any machine capable of running bash shell. I plan on adding more features in the future so
+stay tuned! Thanks for checking it out!
 
 	Instructions (Linux)
 
@@ -39,12 +40,13 @@ features in the future so stay tuned! Thanks for checking it out!
 	*performs
 		- git add .
 		- git commit "Thanks Auto-git!"
+		- git pull origin main
 		- git push origin main
 
  
 UPDATE [11/4/21]: Just added the create a repository feature. It just calls the gh tool (Github CLI) to make a new 
 repository and initializes it so that the repo is ready to use right away. It saves me a lot of time because now I 
-rarely have to leave my keyboard!! Refer to Github CLI documentation for instructions on how to download Github CLI
-on your system. I plan on adding more in the future so stay tuned!
+rarely have to leave my keyboard to do anything for Github. Refer to Github CLI documentation for instructions on 
+how to download Github CLI on your system. I plan on adding more in the future so stay tuned!
 
 
