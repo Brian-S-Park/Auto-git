@@ -33,7 +33,6 @@ stay tuned! Thanks for checking it out!
 	  "export PATH=<insert your path here>:$PATH"
 	4.Save and exit with ctrl+x , 'y' , and enter to accept the changes.
 	5.Done! Now the bash script should work by calling it with "autogit [flag] [input]". Refer to "autogit -h"
-          to find out more about different flags.Done! Now the bash script should work by calling it with "autogit [flag] [input]". Refer to "autogit -h"
           to find out more about different flags. (A restart of terminal may be required) 
 
 	example: autogit -m "Thanks Autogit!"
