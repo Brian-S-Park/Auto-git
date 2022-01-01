@@ -49,7 +49,7 @@ while getopts ":1 :2 :d :m:h" opt; do
         echo "Github Updated!"
       ;;
      r)
-        gh repo create $OPTARG
+        gh repo create
         cd $OPTARG
         git init
         touch README.md
